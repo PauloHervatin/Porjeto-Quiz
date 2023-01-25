@@ -6,9 +6,14 @@ import Welcome from "./components/Welcome";
 import Question from "./components/Question";
 
 import './App.css';
+import { useEffect } from "react";
 
 function App() {
   const [quizState, dispatch] = useContext(QuizContext);
+
+  useEffect(()=>{
+    dispatch({type: "REORDER_QUESTION"});
+  }, [])
 
   return (
     <div className="App">
