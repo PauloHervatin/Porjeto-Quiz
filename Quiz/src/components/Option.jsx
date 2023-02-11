@@ -1,13 +1,14 @@
-// Montando aplicação das opções. video no minuto 59:40
+// video no minuto 1:04:12
 import { useContext } from "react";
 import { QuizContext } from "../context/quiz";
 
 import "./Option.css"
 
-const Option = () => {
+const Option = ({ option}) => {
+  const [quizState ,dispatch] = useContext(QuizContext);
   return (
-    <div>
-      
+    <div className="option">
+      <p>{option}</p>
     </div>
   )
 }
